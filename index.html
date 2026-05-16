@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me – Prasanna Shah</title>
+  <!-- Last Updated: May 2026 -->
+  <link rel="stylesheet" href="PRASANNA_formstyles.css" />
+</head>
+
+<body>
+
+  <!-- ECU Logo -->
+  <div class="logo-container">
+    <img
+      src="ecu_logo.png"
+      alt="ECU Logo"
+      width="200"
+    />
+  </div>
+
+  <!-- Page Navigation -->
+  <nav>
+    <h1>Page Navigation</h1>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#hobbies">Hobbies/Likes</a></li>
+      <li><a href="#forms">Interactive Forms</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== About Me Section ===== -->
+  <section id="about">
+    <h1>About Me</h1>
+
+    <a href="https://www.ecok.edu/index.php" target="_blank">
+      <img
+        class="about-img"
+        src="cs_photo.jpg"
+        alt="A photo related to Computer Science"
+      />
+    </a>
+
+    <p><b>My name is Prasanna Shah.</b></p>
+    <p><i>My major is Computer Science.</i></p>
+    <p><u>I am a Junior.</u></p>
+  </section>
+
+  <!-- ===== Classes Section ===== -->
+  <section id="classes">
+    <h2>Classes</h2>
+    <p>This semester I am taking the following classes:</p>
+
+    <div class="container">
+
+      <div class="grid-X grid-1">
+        <h2>CMPSC 3323 – Internet Programming</h2>
+        <p>This course covers web development using HTML, CSS, and JavaScript. I really enjoy it because it teaches how to build real websites from scratch, and the hands-on projects make it easy to see how everything connects together.</p>
+      </div>
+
+      <div class="grid-X grid-2">
+        <h2>CMPSC 3313 – Adv Computer Lang-Java</h2>
+        <p>This is an advanced Java programming course that dives into object-oriented design, data structures, and algorithms. I like how it challenges me to think logically and write cleaner, more efficient code.</p>
+      </div>
+
+      <div class="grid-X grid-3">
+        <h2>CMPSC 4213 – Data Base Design</h2>
+        <p>This course explores how to design, create, and query relational databases using SQL. It's really practical because almost every application needs a database, so this knowledge is super useful.</p>
+      </div>
+
+      <div class="grid-X grid-4">
+        <h2>CMPSC 3253 – Introduction to Cloud Security</h2>
+        <p>This class introduces cybersecurity concepts in cloud computing environments. I find it fascinating because cloud security is a growing field and understanding how to protect data in the cloud is incredibly relevant today.</p>
+      </div>
+
+      <div class="grid-X grid-5">
+        <h2>CMPSC 4473 – Theory Of Programming Languages</h2>
+        <p>This course digs into the theory behind how programming languages are designed and implemented. It's challenging but rewarding because it helps me understand what's actually happening under the hood of any language I use.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Hobbies Section ===== -->
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Swimming</li>
+      <li>Playing video games</li>
+      <li>Hiking</li>
+      <li>Watching Movies</li>
+    </ul>
+
+    <p>One of my favorite things to do is watch movies — here's a trailer for one of my favorite movie, <em>Spider-Man: Homecoming</em>:</p>
+
+    <iframe
+      class="hobby-iframe"
+      src="https://www.youtube.com/embed/rk-dF1lIbIg"
+      title="Spider-Man: Homecoming Official Trailer"
+      allowfullscreen
+    ></iframe>
+  </section>
+
+  <!-- ===================================================
+       ASSIGNMENT 5 – NEW INTERACTIVE FORMS SECTION
+       =================================================== -->
+  <section id="forms">
+    <h2>Interactive Forms</h2>
+    <p class="section-intro">Assignment 5 &mdash; HTML Forms with JavaScript interactivity.</p>
+
+    <!-- New 2x2+1 grid (mirrors the Classes grid layout) -->
+    <div class="container forms-container">
+
+      <!-- ── GRID A: Arithmetic Calculator ── -->
+      <div class="grid-X form-grid form-grid-A">
+        <h2>&#x1F9EE; Arithmetic Calculator</h2>
+        <p class="form-desc">Enter two numbers and choose an operator.</p>
+
+        <form id="calcForm">
+          <label for="num1">Number 1:</label>
+          <input type="number" id="num1" placeholder="e.g. 10" required />
+
+          <label for="num2">Number 2:</label>
+          <input type="number" id="num2" placeholder="e.g. 5" required />
+
+          <fieldset class="radio-fieldset">
+            <legend>Operator:</legend>
+            <label class="radio-lbl"><input type="radio" name="operator" value="+" checked /> Addition (+)</label>
+            <label class="radio-lbl"><input type="radio" name="operator" value="-" /> Subtraction (&minus;)</label>
+            <label class="radio-lbl"><input type="radio" name="operator" value="*" /> Multiplication (&times;)</label>
+            <label class="radio-lbl"><input type="radio" name="operator" value="/" /> Division (&divide;)</label>
+          </fieldset>
+
+          <div class="btn-row">
+            <button type="submit" class="btn-primary">Calculate</button>
+          </div>
+        </form>
+
+        <div class="output hidden" id="calcOutput"></div>
+      </div>
+
+      <!-- ── GRID B: Factorial ── -->
+      <div class="grid-X form-grid form-grid-B">
+        <h2>&#x1F4D0; Factorial Calculator</h2>
+        <p class="form-desc">Enter a non-negative integer to compute its factorial (n!).</p>
+
+        <form id="factForm">
+          <label for="factNum">Integer (n):</label>
+          <input type="number" id="factNum" placeholder="e.g. 5" min="0" max="20" required />
+          <p class="hint">Example: 5! = 5 &times; 4 &times; 3 &times; 2 &times; 1 = 120</p>
+
+          <div class="btn-row">
+            <button type="submit" class="btn-primary">Compute n!</button>
+          </div>
+        </form>
+
+        <div class="output hidden" id="factOutput"></div>
+      </div>
+
+      <!-- ── GRID C: Fibonacci ── -->
+      <div class="grid-X form-grid form-grid-C">
+        <h2>&#x1F300; Fibonacci Finder</h2>
+        <p class="form-desc">Enter N to find the Nth Fibonacci number.</p>
+
+        <form id="fibForm">
+          <label for="fibN">N (position):</label>
+          <input type="number" id="fibN" placeholder="e.g. 7" min="1" max="75" required />
+          <p class="hint">Example: F(7) = 13 &nbsp; (sequence: 0, 1, 1, 2, 3, 5, 8, 13&hellip;)</p>
+
+          <div class="btn-row">
+            <button type="submit" class="btn-primary">Find F(N)</button>
+          </div>
+        </form>
+
+        <div class="output hidden" id="fibOutput"></div>
+      </div>
+
+      <!-- ── GRID D: Min / Max / Range ── -->
+      <div class="grid-X form-grid form-grid-D">
+        <h2>&#x1F4CA; Min, Max &amp; Range</h2>
+        <p class="form-desc">Enter three numbers to find the minimum, maximum, and range.</p>
+
+        <form id="rangeForm">
+          <label for="rn1">Number 1:</label>
+          <input type="number" id="rn1" placeholder="e.g. 14" required />
+
+          <label for="rn2">Number 2:</label>
+          <input type="number" id="rn2" placeholder="e.g. 38" required />
+
+          <label for="rn3">Number 3:</label>
+          <input type="number" id="rn3" placeholder="e.g. 7" required />
+
+          <div class="btn-row">
+            <button type="submit" class="btn-primary">Analyze</button>
+          </div>
+        </form>
+
+        <div class="output hidden" id="rangeOutput"></div>
+      </div>
+
+      <!-- ── GRID E: Mailing List (spans full width) ── -->
+      <div class="grid-X form-grid form-grid-E grid-5">
+        <h2>&#x2709;&#xFE0F; Mailing List Sign-Up</h2>
+        <p class="form-desc">Fill in your details to join the mailing list. Each submission is added below the form.</p>
+
+        <div class="mailing-wrap">
+
+          <form id="mailingForm">
+            <div class="form-row-2col">
+              <div class="field-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" placeholder="John" required />
+              </div>
+              <div class="field-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" placeholder="Doe" required />
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="field-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="John@AOL.com" required />
+              </div>
+              <div class="field-group">
+                <label for="zipCode">ZIP Code:</label>
+                <input type="text" id="zipCode" placeholder="12345" maxlength="5" pattern="\d{5}" required />
+              </div>
+            </div>
+
+            <div class="btn-row">
+              <button type="submit" class="btn-primary">Subscribe</button>
+              <button type="reset" class="btn-secondary">Reset</button>
+            </div>
+          </form>
+
+          <!-- Sign-up entries appear here -->
+          <div id="mailingOutput" class="mailing-output">
+            <p class="mailing-placeholder"><em>Sign-ups will appear here after submission&hellip;</em></p>
+          </div>
+
+        </div><!-- end .mailing-wrap -->
+      </div>
+
+    </div><!-- end .forms-container -->
+  </section>
+
+  <p><a href="https://www.ecok.edu/index.php" target="_blank">ECU Homepage</a></p>
+
+  <script src="PRASANNA_forms.js"></script>
+</body>
+</html>
